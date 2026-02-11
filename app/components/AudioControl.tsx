@@ -7,7 +7,7 @@ import { useAudio } from '@/lib/context/AudioContext';
 import { Volume2, VolumeX, Music, Play, Pause } from 'lucide-react';
 
 export function AudioControl() {
-  const { isPlaying, isMuted, toggleAudio, toggleMute, volume, setVolume } = useAudio();
+  const { isPlaying, isMuted, toggleAudio, volume, setVolume } = useAudio();
   const [showVolumeSlider, setShowVolumeSlider] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [localVolume, setLocalVolume] = useState(volume);
