@@ -1,7 +1,7 @@
 // app/components/VideoPreview.tsx
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { COUPLES } from '@/lib/constants';
 import { useAudio } from '@/lib/context/AudioContext';
