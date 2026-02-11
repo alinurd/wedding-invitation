@@ -273,7 +273,7 @@ npm run lint
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/username/wedding-invitation
+git remote add origin https://github.com/alinurd/wedding-invitation
 git push -u origin main
 ```
 
