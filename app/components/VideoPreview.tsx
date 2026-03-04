@@ -100,25 +100,13 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
                   <p className="text-xs md:text-sm text-white/80 mb-4 font-light tracking-widest uppercase">
                     Our Love Story
                   </p>
-                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8">
+                  <h1 className="text-md md:text-5xl lg:text-6xl font-light text-white mb-8">
                     {COUPLES.groom.nickname} & {COUPLES.bride.nickname}
                   </h1>
                 </motion.div>
 
                 {/* Invitation Text */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 1 }}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-6"
-                >
-                  <p className="text-sm md:text-base text-white mb-2 font-light tracking-wider">
-                    Kami mengundang Anda untuk menjadi bagian dari
-                  </p>
-                  <p className="text-lg md:text-xl text-white font-light">
-                    Hari Bahagia Kami
-                  </p>
-                </motion.div>
+                
 
                 {/* Decorative Elements */}
                 <motion.div

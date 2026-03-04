@@ -44,7 +44,7 @@ const HandleOpen=()=>{
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/images/ucapan.jpeg"
+          src="/images/foto.jpeg"
           alt="Wedding background"
           fill
           className="object-cover"
@@ -138,12 +138,6 @@ const HandleOpen=()=>{
           transition={{ duration: 2, repeat: Infinity }}
         >
           <div className="flex flex-col items-center gap-2">
-            <button className="px-8 py-3 md:px-10 md:py-4 text-white border border-white/40 hover:border-white/80 rounded-full font-medium text-sm flex items-center gap-2 backdrop-blur-md hover:bg-white/10 transition-all"
-
-              onClick={open}
-            >
-            Open 
-          </button>
             <p className="text-white/40 text-xs uppercase tracking-widest font-light">
               Scroll to explore
             </p>

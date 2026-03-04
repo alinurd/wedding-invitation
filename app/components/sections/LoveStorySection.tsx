@@ -124,7 +124,7 @@ export function LoveStorySection() {
                 {/* Image */}
                 <div className="relative w-full h-full">
                   <Image
-                   src="/images/foto.jpeg"
+                   src={story.image}
                     alt={story.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"

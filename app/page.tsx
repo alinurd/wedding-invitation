@@ -1,7 +1,6 @@
-// app/page.tsx
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { VideoPreview } from '@/app/components/VideoPreview';
 import { HeroSection } from '@/app/components/sections/HeroSection';
 import { LoveStorySection } from '@/app/components/sections/LoveStorySection';
@@ -11,7 +10,19 @@ import { AudioControl } from './components/AudioControl';
 
 export default function Home() {
   const [showVideoPreview, setShowVideoPreview] = useState(true);
-  const [showAllSection, setShowAllSection] = useState(false);
+  const [showAllSection, setShowAllSection] = useState(true);
+  const [videoUrl, setVideoUrl] = useState('/videos/vid.mp4');
+
+  // Detect device
+  useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+      setVideoUrl('/videos/vid1.mp4');
+    } else {
+      setVideoUrl('/videos/vid.mp4');
+    }
+  }, []);
 
   const handleVideoComplete = () => {
     setShowVideoPreview(false);
@@ -23,21 +34,17 @@ export default function Home() {
 
   return (
     <>
-      {/* Video preview modal */}
       {showVideoPreview && (
         <VideoPreview
           onComplete={handleVideoComplete}
-          videoUrl="/videos/vid.mp4"
+          videoUrl={videoUrl}
         />
       )}
 
-      {/* Main invitation sections */}
       {!showVideoPreview && (
         <main className="w-full overflow-x-hidden relative">
-          {/* Hero Section */}
           <HeroSection openInvitation={handleOpenInvitation} />
 
-          {/* Other sections - only show after opening invitation */}
           {showAllSection && (
             <>
               <LoveStorySection />
@@ -46,7 +53,6 @@ export default function Home() {
             </>
           )}
 
-          {/* Audio Control - Fixed Position */}
           <div className="fixed bottom-6 right-6 z-[999]">
             <AudioControl />
           </div>
