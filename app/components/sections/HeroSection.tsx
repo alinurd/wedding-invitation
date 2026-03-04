@@ -32,12 +32,12 @@ export function HeroSection({openInvitation}:Props) {
       },
     },
   };
-const HandleOpen=()=>{
-  openInvitation();
-}
-  const open = () => {
-    HandleOpen();
-  };
+// const HandleOpen=()=>{
+//   openInvitation();
+// }
+  // const open = () => {
+  //   HandleOpen();
+  // };
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800">
       
