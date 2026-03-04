@@ -77,8 +77,6 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
               onTimeUpdate={handleTimeUpdate}
               autoPlay
               playsInline
-              
-  preload="auto"
             />
 
             {/* Overlay Gradient for Better Text Readability */}
