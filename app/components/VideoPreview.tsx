@@ -160,6 +160,7 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="text-center px-4 max-w-2xl"
                   >
+                    
                     <p className="text-xs md:text-sm text-white/60 mb-3 font-light tracking-[0.3em] uppercase">
                       The Wedding of
                     </p>
@@ -168,8 +169,11 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
                       <span className="mx-4 text-white/40 font-thin">&</span>
                       {COUPLES.bride.nickname}
                     </h1>
-                    <p className="text-sm md:text-base text-white/80 mb-8 font-light max-w-md mx-auto">
+                    <p className="text-sm md:text-base text-white/80 mb-7 font-light max-w-md mx-auto">
                       Dengan segala kerendahan hati, kami mengundang Anda untuk menjadi saksi kebahagiaan kami
+                    </p>
+                    <p className=" text-white text-sm tracking-[0.2em] uppercase mb-5">
+                       30 Maret 2026
                     </p>
                   </motion.div>
 
@@ -208,7 +212,7 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.5 }}
                     transition={{ delay: 1.5, duration: 0.5 }}
-                    className="absolute bottom-8 text-white/30 text-xs tracking-wider"
+                    className="absolute bottom-8 text-white/50 text-xs tracking-wider"
                   >
                     Klik tombol untuk memulai
                   </motion.p>
