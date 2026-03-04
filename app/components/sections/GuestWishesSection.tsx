@@ -23,7 +23,7 @@ export function GuestWishesSection() {
     {
       id: '2',
       name: 'Pak Budi',
-      message: 'Congratulations Rizki & Haliza! Wishing you both a lifetime of happiness together.',
+      message: 'Congratulations Ali & Haliza! Wishing you both a lifetime of happiness together.',
       timestamp: new Date('2024-12-11'),
     },
     {

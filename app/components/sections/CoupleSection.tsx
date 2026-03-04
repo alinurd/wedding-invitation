@@ -75,7 +75,7 @@ export function CoupleSection() {
 
               <Image
                 src="/images/foto.jpeg"
-                alt="Rizki & Haliza"
+                alt="Ali & Ia"
                 width={500}
                 height={700}
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
@@ -210,7 +210,7 @@ export function CoupleSection() {
             <p className="text-2xl md:text-3xl font-light text-yellow-600 italic mb-4">
               "Dua jalan berbeda membawa kita ke tujuan yang sama: Selamanya bersamamu."
             </p>
-            <p className="text-text-secondary font-light">— Rizki & Haliza</p>
+            <p className="text-text-secondary font-light">— Ali & Ia</p>
           </div>
         </motion.div>
       </motion.div>

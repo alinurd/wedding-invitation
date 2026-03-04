@@ -77,6 +77,8 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
               onTimeUpdate={handleTimeUpdate}
               autoPlay
               playsInline
+              
+  preload="auto"
             />
 
             {/* Overlay Gradient for Better Text Readability */}
@@ -100,9 +102,9 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
                   <p className="text-xs md:text-sm text-white/80 mb-4 font-light tracking-widest uppercase">
                     Our Love Story
                   </p>
-                  <h1 className="text-md md:text-5xl lg:text-6xl font-light text-white mb-8">
+                  <p className="text-xs md:text-sm text-white/80 mb-4 font-light tracking-widest uppercase">
                     {COUPLES.groom.nickname} & {COUPLES.bride.nickname}
-                  </h1>
+                  </p>
                 </motion.div>
 
                 {/* Invitation Text */}
