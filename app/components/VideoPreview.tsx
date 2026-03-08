@@ -3,9 +3,9 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { COUPLES } from '@/lib/constants';
+import { COUPLES, WEDDING_INFO } from '@/lib/constants';
 import { useAudio } from '@/lib/context/AudioContext';
-
+import { useSearchParams } from 'next/navigation';
 interface VideoPreviewProps {
   onComplete: () => void;
   videoUrl?: string;
@@ -18,6 +18,15 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
   const [showOverlay, setShowOverlay] = useState(true); // State untuk overlay pembuka
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   
+  const searchParams = useSearchParams();
+  const guestName = (() => {
+  const to = searchParams.get('to');
+  if (!to) return '';
+
+  return to
+    .replace(/-/g, ' ')
+    .replace(/\bdan\b/gi, '&');
+})();
   const { startAudio } = useAudio();
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -136,90 +145,135 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }
             )}
 
             {/* Opening Overlay */}
-            <AnimatePresence>
-              {showOverlay && isVideoLoaded && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0 z-40 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm"
-                >
-                  {/* Decorative Line */}
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: 80 }}
-                    transition={{ delay: 0.3, duration: 0.8 }}
-                    className="h-px bg-white/40 mb-8"
-                  />
+          <AnimatePresence>
+  {showOverlay && isVideoLoaded && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="absolute inset-0 z-40 flex items-center justify-center bg-black/70 backdrop-blur-md px-6"
+    >
 
-                  {/* Title */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                    className="text-center px-4 max-w-2xl"
-                  >
-                    
-                    <p className="text-xs md:text-sm text-white/60 mb-3 font-light tracking-[0.3em] uppercase">
-                      The Wedding of
-                    </p>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 tracking-wide">
-                      {COUPLES.groom.nickname}
-                      <span className="mx-4 text-white/40 font-thin">&</span>
-                      {COUPLES.bride.nickname}
-                    </h1>
-                    <p className="text-sm md:text-base text-white/80 mb-7 font-light max-w-md mx-auto">
-                      Dengan segala kerendahan hati, kami mengundang Anda untuk menjadi saksi kebahagiaan kami
-                    </p>
-                    <p className=" text-white text-sm tracking-[0.2em] uppercase mb-5">
-                       30 Maret 2026
-                    </p>
-                  </motion.div>
+      <div className="flex flex-col items-center max-w-xl w-full">
 
-                  {/* Decorative Line */}
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: 80 }}
-                    transition={{ delay: 0.8, duration: 0.8 }}
-                    className="h-px bg-white/40 mb-8"
-                  />
+        {/* Top Decorative Line */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: 120 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="h-px bg-white/40 mb-8"
+        />
 
-                  {/* Start Button */}
-                  <motion.button
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1, duration: 0.5 }}
-                    onClick={handleStartVideo}
-                    className="group relative px-8 py-4 overflow-hidden rounded-full"
-                  >
-                    <span className="absolute inset-0 bg-white/10 backdrop-blur-md border border-white/30 rounded-full group-hover:bg-white/20 transition-all duration-300" />
-                    <span className="relative text-white text-sm tracking-[0.2em] uppercase flex items-center gap-3">
-                      Buka Undangan
-                      <svg 
-                        className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
-                  </motion.button>
+        {/* Invitation Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="relative w-full text-center px-8 py-12 rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
+        >
 
-                  {/* Hint Text */}
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.5 }}
-                    transition={{ delay: 1.5, duration: 0.5 }}
-                    className="absolute bottom-8 text-white/50 text-xs tracking-wider"
-                  >
-                    Klik tombol untuk memulai
-                  </motion.p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/card.jpg')" }}
+          />
 
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-xs" />
+
+          {/* Content */}
+          <div className="relative z-10">
+
+            {/* Title */}
+            <p className="text-xs md:text-sm text-white/70 tracking-[0.35em] uppercase mb-4">
+              The Wedding of
+            </p>
+
+            {/* Couple Name */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+              {COUPLES.bride.nickname}
+              <span className="mx-4 text-white/40">&</span>
+              {COUPLES.groom.nickname}
+            </h1>
+
+            {/* Invitation Text */}
+            <p className="text-sm md:text-base text-white/90 mb-6 max-w-md mx-auto leading-relaxed">
+              Dengan segala kerendahan hati kami mengundang Anda untuk menjadi
+              saksi kebahagiaan kami
+            </p>
+
+            {/* Guest Name */}
+            {guestName && (
+              <div className="mb-6">
+                <p className="text-xs text-white/60 uppercase tracking-[0.25em] mb-2">
+                  Kepada Yth.
+                </p>
+
+                <p className="text-lg md:text-xl text-white uppercase tracking-wide">
+                  {guestName}
+                </p>
+              </div>
+            )}
+
+            {/* Date */}
+            <p className="text-white text-sm tracking-[0.25em]">
+              {WEDDING_INFO.formattedDate}
+            </p>
+
+          </div>
+        </motion.div>
+
+        {/* Bottom Decorative Line */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: 120 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="h-px bg-white/40 mt-8 mb-10"
+        />
+
+        {/* Open Invitation Button */}
+        <motion.button
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          onClick={handleStartVideo}
+          className="group relative px-8 py-4 rounded-full overflow-hidden"
+        >
+          <span className="absolute inset-0 bg-white/10 backdrop-blur-md border border-white/30 rounded-full group-hover:bg-white/20 transition-all duration-300" />
+
+          <span className="relative text-white text-sm tracking-[0.25em] uppercase flex items-center gap-3">
+            Buka Undangan
+            <svg
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
+        </motion.button>
+
+        {/* Hint */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.5 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
+          className="mt-8 text-white/50 text-xs tracking-wider"
+        >
+          Klik tombol untuk membuka undangan
+        </motion.p>
+
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
             {/* Video Controls Overlay (only visible when playing) */}
             {!showOverlay && (
               <>

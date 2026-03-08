@@ -122,8 +122,8 @@ export function CoupleSection() {
                 </div>
               {/* Education Badge */}
               <div className="bg-white/10 backdrop-blur-md border border-yellow-400/40 rounded-2xl p-4  ">
-                <p className="text-3xl md:text-3xl uppercase tracking-widest text-white font-light mb-1">{COUPLES.groom.name} ({COUPLES.groom.nickname})</p>
-                <p className="text-white font-light ">Putra ketiga ibu hj. Alis & bpk Rosid (alm)</p>
+                <p className="text-2xl md:text-2xl uppercase tracking-widest text-white font-light mb-1">{COUPLES.groom.name} ({COUPLES.groom.nickname})</p>
+                <p className="text-white font-light text-sm ">Putra ketiga ibu hj. Alis & bpk Rosid (alm)</p>
               </div>
 
             </div>
@@ -151,8 +151,8 @@ export function CoupleSection() {
 
               {/* Education Badge */}
               <div className="bg-white/10 backdrop-blur-md border border-rose-400/40 rounded-2xl p-4  mb-4">
-                <p className="text-3xl md:text-3xl uppercase tracking-widest text-white font-light mb-1">{COUPLES.bride.name} ({COUPLES.bride.nickname})</p>
-                <p className="text-white font-light ">Putra pertama ibu Asih & bpk Husen (Aceng)</p>
+                <p className="text-2xl md:text-2xl uppercase tracking-widest text-white font-light mb-1">{COUPLES.bride.name} ({COUPLES.bride.nickname})</p>
+                <p className="text-white font-light text-sm">Putra pertama ibu Asih & bpk Husen (Aceng)</p>
               </div>
 
             </div>
@@ -166,10 +166,10 @@ export function CoupleSection() {
                         <div className="text-center md:text-left">
                          
                           <p className="text-yellow-300 text-xs uppercase tracking-widest font-light mb-1">
-                            Resepsi
+                            Resepsi & Akad
                           </p>
-                          <p className="text-white text-xl  font-light">
-                            {WEDDING_INFO.dayName}, {WEDDING_INFO.formattedDate}
+                          <p className="text-white text-md  font-light">
+                            {WEDDING_INFO.formattedDate}
                           </p>
                         </div>
             
@@ -179,10 +179,10 @@ export function CoupleSection() {
                         {/* Location */}
                         <div className="text-center md:text-left">
                           <p className="text-yellow-300 text-xs uppercase tracking-widest font-light mb-1">
-                            Akad
+                            {WEDDING_INFO.akadName}
                           </p>
-                          <p className="text-white text-xl  font-light">
-                            {WEDDING_INFO.location.city}, Indonesia
+                          <p className="text-white text-md  font-light">
+                            {WEDDING_INFO.akadDate}
                           </p>
                         </div>
                       </div>
@@ -193,9 +193,19 @@ export function CoupleSection() {
                             Lokasi
                           </p>
                           <p className="text-white text-xl font-light">
-                            Kp. Pasir Pari RT. 003 RW. 004 Desa Kiarasari Kec. Sukajaya-Bogor
+                            {WEDDING_INFO.location.resepsi}
                           </p>
                         </div>
+                        <div className="text-center">
+                            <a
+                              href={WEDDING_INFO.location.map}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block px-6 py-2 mt-4 rounded-full border border-white/30 text-white text-sm hover:bg-yellow-300 text-white transition"
+                            >
+                              Buka Google Maps
+                            </a>
+</div>
                     </motion.div>
 
           </motion.div>
@@ -210,7 +220,7 @@ export function CoupleSection() {
             <p className="text-2xl md:text-3xl font-light text-yellow-600 italic mb-4">
               "Dua jalan berbeda membawa kita ke tujuan yang sama: Selamanya bersamamu."
             </p>
-            <p className="text-text-secondary font-light">— Ali & Ia</p>
+            <p className="text-text-secondary font-light">— Ali & Ia —</p>
           </div>
         </motion.div>
       </motion.div>

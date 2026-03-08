@@ -178,7 +178,7 @@ export const LOVE_STORY = [
     description:
       'Tak ada yang kebetulan di dunia ini. Pertemuan pertama itu terjadi begitu sederhana. Ia sedang menjaga karcis di tempat kerjanya, sementara sang pria datang membeli kopi khas Curug Kembar. Hanya tatapan singkat tanpa percakapan panjang. Setelah hari itu, waktu memisahkan mereka cukup lama tanpa pernah bertemu kembali.',
     image: '/images/story/1.jpeg',
-    emoji: '😊',
+    emoji: '✨',
     color: '#e8d4c4',
   },
   {
@@ -189,7 +189,7 @@ export const LOVE_STORY = [
     description:
       'Beberapa bulan berlalu, takdir kembali mempertemukan mereka. Sang pria mengadakan sebuah event di Curug Kembar — tempat di mana sang wanita bekerja. Saat itu, wanita tersebut tidak disangka--sangka mengantarkan makanan untuk acara tersebut, sedang itu bukan perkerjaan dia. Pertemuan kedua yang masih terasa biasa, namun tanpa mereka sadari, benih cerita mulai tumbuh perlahan.',
     image: '/images/story/2.jpeg',
-    emoji: '😁',
+    emoji: '✨',
     color: '#e8d4c4',
   },
   {
@@ -310,26 +310,16 @@ export const LOVE_STORY = [
 
 export const WEDDING_INFO = {
   date: '2026-03-30',
+  akadDate: '08:00 s/d Selesai',
+  akadName: 'Waktu',
   dayName: 'Senin',
-  formattedDate: '30 Maret 2026',
-  schedule: {
-    reception: { time: '10:00', label: 'Resepsi' },
-    ceremony: { time: '10:30', label: 'Upacara Pernikahan' },
-    dinner: { time: '12:00', label: 'Makan Bersama' },
-  },
+  formattedDate: 'Senin, 30 Maret 2026',
   location: {
-    name: 'Grand Ballroom Kemang',
-    address: 'Jl. Kemang Raya No. 123, Jakarta Selatan 12560',
-    city: 'Jakarta',
-    country: 'Indonesia',
-    coordinates: {
-      lat: -6.25,
-      lng: 106.8,
-    },
-    mapsUrl:
-      'https://www.google.com/maps/search/Grand+Ballroom+Kemang+Jakarta',
-    phone: '+62 21 1234 5678',
+    akad: 'Kediaman Pempelai Wanita',
+    resepsi: 'Kp.Cisangku RT.01 RW.02 Desa Malasari Kec.Nanggung - Bogor',
+    map: 'https://goo.gl/maps/tY7EVuLTjmpsTgDcA',
   },
+  
   dress_code: {
     formal: 'Batik / Kebaya (Tradisional)',
     alternative: 'Formal Western (Black Tie Optional)',
