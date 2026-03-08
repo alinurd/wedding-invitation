@@ -5,28 +5,20 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { COUPLES, WEDDING_INFO } from '@/lib/constants';
 import { useAudio } from '@/lib/context/AudioContext';
-import { useSearchParams } from 'next/navigation';
 interface VideoPreviewProps {
   onComplete: () => void;
   videoUrl?: string;
+  guestName?: string;
 }
 
-export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4' }: VideoPreviewProps) {
+export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4',guestName }: VideoPreviewProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false); // Ubah default ke false
   const [progress, setProgress] = useState(0);
   const [showOverlay, setShowOverlay] = useState(true); // State untuk overlay pembuka
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   
-  const searchParams = useSearchParams();
-  const guestName = (() => {
-  const to = searchParams.get('to');
-  if (!to) return '';
-
-  return to
-    .replace(/-/g, ' ')
-    .replace(/\bdan\b/gi, '&');
-})();
+ 
   const { startAudio } = useAudio();
   const videoRef = useRef<HTMLVideoElement>(null);
 

@@ -7,11 +7,22 @@ import { LoveStorySection } from '@/app/components/sections/LoveStorySection';
 import { CoupleSection } from '@/app/components/sections/CoupleSection';
 import { GuestWishesSection } from '@/app/components/sections/GuestWishesSection';
 import { AudioControl } from './components/AudioControl';
+import { useSearchParams } from 'next/navigation';
 
 export default function Home() {
   const [showVideoPreview, setShowVideoPreview] = useState(true);
   const [showAllSection, setShowAllSection] = useState(true);
   const [videoUrl, setVideoUrl] = useState('/videos/vid.mp4');
+
+   const searchParams = useSearchParams();
+    const guestName = (() => {
+    const to = searchParams.get('to');
+    if (!to) return '';
+  
+    return to
+      .replace(/-/g, ' ')
+      .replace(/\bdan\b/gi, '&');
+  })();
 
   // Detect device
   useEffect(() => {
@@ -38,6 +49,7 @@ export default function Home() {
         <VideoPreview
           onComplete={handleVideoComplete}
           videoUrl={videoUrl}
+          guestName={guestName}
         />
       )}
 
