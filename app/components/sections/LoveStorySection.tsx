@@ -45,7 +45,7 @@ export function LoveStorySection() {
       {/* Background Decoration */}
       
 <Image
-src="/ia/images/story.jpeg"
+src="/images/story.jpeg"
 // src={`${IMGAE_PATH}/story.jpeg`}
             // src="/images/story.jpeg"
             alt="Wedding background"

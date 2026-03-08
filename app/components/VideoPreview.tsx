@@ -169,7 +169,6 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4',g
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${IMGAE_PATH}/card.jpg)` }}
-            // style={{ backgroundImage: "url('/ia/images/card.jpg')" }}
           />
 
           {/* Dark Overlay */}

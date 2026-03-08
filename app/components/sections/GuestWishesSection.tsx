@@ -76,7 +76,7 @@ export function GuestWishesSection() {
       bank: 'BCA',
       accountNumber: '6241436478',
       name: 'Ali Nurdin',
-      icon: '/ia/images/bca.png'
+      icon: '/images/bca.png'
     },
   ];
 
@@ -318,7 +318,7 @@ export function GuestWishesSection() {
       {/* Background Decoration */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/ia/images/ucapan.jpg"
+          src="/images/ucapan.jpg"
           alt="Wedding background"
           fill
           className="object-cover"

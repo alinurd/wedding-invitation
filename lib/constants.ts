@@ -66,7 +66,7 @@ export const COUPLES = {
     name: 'Ali Nurdin, S.kom',
     nickname: 'Ali',
     age: 28,
-    image: '/ia/images/foto.jpeg',
+    image: '/images/foto.jpeg',
     bio: 'Software Engineer dengan passion di bidang AI & Cloud Technology. Pecinta outdoor adventure, coffee lover, dan photography enthusiast.',
     education: 'S.T Teknik Informatika - Institut Teknologi Bandung',
     occupation: 'Senior Software Engineer at TechCorp',
@@ -84,7 +84,7 @@ export const COUPLES = {
     name: 'Siti Tyani',
     nickname: 'Ia',
     age: 26,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     bio: 'Creative Director dan Graphic Designer dengan keahlian dalam branding & UX/UI Design. Senang traveling, cooking, dan menciptakan karya seni visual.',
     education: 'S.Sn Desain Komunikasi Visual - Universitas Pelita Harapan',
     occupation: 'Creative Director at DesignStudio',
@@ -112,25 +112,25 @@ export const FAMILIES = {
         name: 'Ir. Bambang Suryanto, M.Eng',
         role: 'Ayah',
         title: 'Direktur PT. Konstruksi Indonesia',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
       {
         name: 'Ir. Siti Nurhasanah, M.Sc',
         role: 'Ibu',
         title: 'Dosen Universitas Indonesia',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
     ],
     siblings: [
       {
         name: 'Rizka Suryanti',
         relation: 'Kakak',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
       {
         name: 'Reyhan Surya',
         relation: 'Adik',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
     ],
   },
@@ -141,25 +141,25 @@ export const FAMILIES = {
         name: 'Prof. Dr. Ahmad Salim, S.E., MBA',
         role: 'Ayah',
         title: 'Professor Ekonomi Islam',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
       {
         name: 'Dra. Fatimah Zahra, M.Pd',
         role: 'Ibu',
         title: 'Kepala Sekolah SMA Unggulan',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
     ],
     siblings: [
       {
         name: 'Nadia Salim',
         relation: 'Kakak',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
       {
         name: 'Fakhri Ahmad',
         relation: 'Adik',
-        image: '/ia/images/images/foto.jpeg',
+        image: '/images/images/foto.jpeg',
       },
     ],
   },
@@ -177,7 +177,7 @@ export const LOVE_STORY = [
     title: 'Pertama Kali Bertatap',
     description:
       'Tak ada yang kebetulan di dunia ini. Pertemuan pertama itu terjadi begitu sederhana. Ia sedang menjaga karcis di tempat kerjanya, sementara sang pria datang membeli kopi khas Curug Kembar. Hanya tatapan singkat tanpa percakapan panjang. Setelah hari itu, waktu memisahkan mereka cukup lama tanpa pernah bertemu kembali.',
-    image: '/ia/images/story/1.jpeg',
+    image: '/images/story/1.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -188,7 +188,7 @@ export const LOVE_STORY = [
     title: 'Pertemuan Kedua',
     description:
       'Beberapa bulan berlalu, takdir kembali mempertemukan mereka. Sang pria mengadakan sebuah event di Curug Kembar — tempat di mana sang wanita bekerja. Saat itu, wanita tersebut tidak disangka--sangka mengantarkan makanan untuk acara tersebut, sedang itu bukan perkerjaan dia. Pertemuan kedua yang masih terasa biasa, namun tanpa mereka sadari, benih cerita mulai tumbuh perlahan.',
-    image: '/ia/images/story/2.jpeg',
+    image: '/images/story/2.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -199,7 +199,7 @@ export const LOVE_STORY = [
     title: 'Pertemuan Ketiga',
     description:
       'Takdir kembali bekerja dengan caranya yang unik. Sang wanita berkunjung ke rumah sang pria untuk mengantar saudaranya bersilaturahmi. Di situlah mereka mengetahui adanya ikatan saudara jauh di antara keluarga mereka. Hubungan itu hanya sebatas silaturahmi keluarga, tanpa ada sedikit pun niat atau arah menuju asmara.',
-    image: '/ia/images/story/3.jpeg',
+    image: '/images/story/3.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -210,7 +210,7 @@ export const LOVE_STORY = [
     title: 'Silaturahmi Berlanjut',
     description:
       'Pertemuan berikutnya masih dalam suasana kekeluargaan. Mereka saling berkunjung sebagai saudara, menjaga adab dan batas. Tidak ada yang aneh, semuanya berjalan sebagaimana mestinya.',
-    image: '/ia/images/story/4.jpeg',
+    image: '/images/story/4.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -221,7 +221,7 @@ export const LOVE_STORY = [
     title: 'Komunikasi Tanpa Henti',
     description:
       'Seiring waktu, komunikasi mulai terjalin semakin intens. Percakapan demi percakapan mengalir tanpa terasa. Dari hal sederhana hingga cerita kehidupan. Perlahan, tanpa mereka sadari, rasa itu tumbuh dan mulai mengarah pada sesuatu yang lebih dari sekadar silaturahmi.',
-    image: '/ia/images/story/6.jpeg',
+    image: '/images/story/6.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -232,7 +232,7 @@ export const LOVE_STORY = [
     title: 'Sebuah Tantangan',
     description:
       'Sang wanita memberikan tantangan yang tegas namun penuh makna: "jika ingin serius, datanglah dan minta izin kepada orang tuaku". Tanpa ragu, sang pria membuktikan kesungguhannya dengan langkah nyata — menghadap dan menyampaikan niat baiknya.',
-    image: '/ia/images/story/7.jpeg',
+    image: '/images/story/7.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -243,7 +243,7 @@ export const LOVE_STORY = [
     title: 'Kencan Pertama',
     description:
       'Untuk pertama kalinya mereka pergi bersama dalam sebuah aquarium date. Di antara gemerlap cahaya dan tenangnya suasana, mereka berbicara panjang tentang masa depan, menyusun langkah demi langkah menuju tujuan yang sama.',
-    image: '/ia/images/story/8.jpeg',
+    image: '/images/story/8.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -254,7 +254,7 @@ export const LOVE_STORY = [
     title: 'Tunangan',
     description:
       'Dengan keyakinan yang semakin kuat, mereka mantap memilih satu sama lain. Di bulan ini, mereka mengikat janji dalam sebuah pertunangan, sebagai tanda keseriusan menuju jenjang yang lebih sakral.',
-    image: '/ia/images/story/9.jpeg',
+    image: '/images/story/9.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -265,7 +265,7 @@ export const LOVE_STORY = [
     title: 'Jungle Date',
     description:
       'Di sela waktu libur, mereka menyempatkan diri untuk sejenak menghilangkan penat. Sebuah jungle date menjadi momen untuk semakin mengenal satu sama lain lebih dalam, sambil menanti hari bahagia yang semakin dekat.',
-    image: '/ia/images/story/10.jpeg',
+    image: '/images/story/10.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -276,7 +276,7 @@ export const LOVE_STORY = [
     title: 'Proses Lamaran',
     description:
       'Setahun perjalanan yang terasa singkat namun penuh makna. Dengan disaksikan kedua keluarga besar, mereka melangsungkan lamaran sebagai langkah resmi menuju pernikahan.',
-    image: '/ia/images/story/11.jpeg',
+    image: '/images/story/11.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -287,7 +287,7 @@ export const LOVE_STORY = [
     title: 'Prewedding',
     description:
       'Mereka mengabadikan momen bahagia yang telah dinantikan selama 25 tahun kehidupan masing-masing. Senyum, tawa, dan harapan tergambar jelas dalam setiap potret yang menjadi saksi perjalanan cinta mereka.',
-    image: '/ia/images/story/12.jpeg',
+    image: '/images/story/12.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -298,7 +298,7 @@ export const LOVE_STORY = [
     title: 'Happy Ending (Wedding)',
     description:
       'Akhirnya, mereka mengikrarkan janji suci dalam ikatan pernikahan. Berjanji untuk hidup bersama dalam suka maupun duka, saling menguatkan, dan membangun keluarga kecil yang penuh cinta hingga akhir hayat.',
-    image: '/ia/images/story/13.jpeg',
+    image: '/images/story/13.jpeg',
     emoji: '✨',
     color: '#e8d4c4',
   },
@@ -307,7 +307,7 @@ export const LOVE_STORY = [
 // ============================================
 // WEDDING DETAILS
 // ============================================
-export const IMGAE_PATH = '/ia/images/';
+export const IMGAE_PATH = '/images/';
 export const WEDDING_INFO = {
   date: '2026-03-30',
   akadDate: '08:00 s/d Selesai',
@@ -340,49 +340,49 @@ export const WEDDING_INFO = {
 export const GALLERY = [
   {
     id: 1,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Beach Vibes',
     category: 'prewedding',
   },
   {
     id: 2,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Urban Aesthetic',
     category: 'prewedding',
   },
   {
     id: 3,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Sunset Romance',
     category: 'prewedding',
   },
   {
     id: 4,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Natural Beauty',
     category: 'prewedding',
   },
   {
     id: 5,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Golden Hour',
     category: 'prewedding',
   },
   {
     id: 6,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Couple Goals',
     category: 'prewedding',
   },
   {
     id: 7,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Engagement Moment',
     category: 'engagement',
   },
   {
     id: 8,
-    image: '/ia/images/images/foto.jpeg',
+    image: '/images/images/foto.jpeg',
     title: 'Ring Detail',
     category: 'engagement',
   },

@@ -31,7 +31,7 @@ export function CoupleSection() {
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 w-full h-full">
               <Image
-              src="/ia/images/story.jpeg"
+              src="/images/story.jpeg"
                 alt="Wedding background"
                 fill
                 className="object-cover"
@@ -75,7 +75,7 @@ export function CoupleSection() {
 
               <Image
               // src={`${IMGAE_PATH}/foto.jpeg`}
-              src="/ia/images/foto.jpeg"
+              src="/images/foto.jpeg"
                 alt="Ali & Ia"
                 width={500}
                 height={700}
