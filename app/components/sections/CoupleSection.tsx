@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { COUPLES, WEDDING_INFO } from '@/lib/constants';
+import { COUPLES, IMGAE_PATH, WEDDING_INFO } from '@/lib/constants';
 
 export function CoupleSection() {
   const containerVariants = {
@@ -31,7 +31,7 @@ export function CoupleSection() {
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 w-full h-full">
               <Image
-                src="/images/foto.jpeg"
+                src={`${IMGAE_PATH}/foto.jpeg`}
                 alt="Wedding background"
                 fill
                 className="object-cover"
@@ -74,7 +74,7 @@ export function CoupleSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-white-400/20 to-rose-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <Image
-                src="/images/foto.jpeg"
+              src={`${IMGAE_PATH}/foto.jpeg`}
                 alt="Ali & Ia"
                 width={500}
                 height={700}

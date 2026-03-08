@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { COUPLES, WEDDING_INFO } from '@/lib/constants';
+import { COUPLES, IMGAE_PATH, WEDDING_INFO } from '@/lib/constants';
 
 interface Props {
   openInvitation: () => void;
@@ -44,7 +44,8 @@ export function HeroSection({openInvitation}:Props) {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/images/foto.jpeg"
+        src={`${IMGAE_PATH}/foto.jpeg`}
+          // src="/images/foto.jpeg"
           alt="Wedding background"
           fill
           className="object-cover"

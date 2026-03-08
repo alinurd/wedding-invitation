@@ -4,7 +4,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { LOVE_STORY } from '@/lib/constants';
+import { IMGAE_PATH, LOVE_STORY } from '@/lib/constants';
 
 export function LoveStorySection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -45,7 +45,8 @@ export function LoveStorySection() {
       {/* Background Decoration */}
       
 <Image
-            src="/images/story.jpeg"
+src={`${IMGAE_PATH}/story.jpeg`}
+            // src="/images/story.jpeg"
             alt="Wedding background"
             fill
             className="object-cover"

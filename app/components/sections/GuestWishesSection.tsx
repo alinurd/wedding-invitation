@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Camera, Upload, X, Send, User, Heart } from 'lucide-react';
+import { IMGAE_PATH } from '@/lib/constants';
 
 interface Wish {
   id: string;
@@ -145,7 +146,9 @@ export function GuestWishesSection() {
       {/* Background Decoration */}
    <div className="absolute inset-0 w-full h-full">
            <Image
-             src="/images/ucapan.jpeg"
+           src={`${IMGAE_PATH}/ucapan.jpeg`}
+           
+            //  src="/images/ucapan.jpeg"
              alt="Wedding background"
              fill
              className="object-cover"
