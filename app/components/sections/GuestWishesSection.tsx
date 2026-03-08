@@ -146,7 +146,7 @@ export function GuestWishesSection() {
       {/* Background Decoration */}
    <div className="absolute inset-0 w-full h-full">
            <Image
-           src="/ia/images/ucapan.jpeg"
+           src="/ia/images/ucapan.jpg"
 
           //  src={`${IMGAE_PATH}/ucapan.jpeg`}
            

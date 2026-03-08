@@ -236,7 +236,7 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4',g
           <span className="absolute inset-0 bg-white/10 backdrop-blur-md border border-white/30 rounded-full group-hover:bg-white/20 transition-all duration-300" />
 
           <span className="relative text-white text-sm tracking-[0.25em] uppercase flex items-center gap-3">
-            Buka Undangan tetstststtst
+            Buka Undangan
             <svg
               className="w-4 h-4 group-hover:translate-x-1 transition-transform"
               fill="none"
