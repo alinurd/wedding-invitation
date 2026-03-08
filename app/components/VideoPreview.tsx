@@ -184,9 +184,9 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4',g
 
             {/* Couple Name */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              {COUPLES.bride.nickname}
-              <span className="mx-4 text-white/40">&</span>
               {COUPLES.groom.nickname}
+              <span className="mx-4 text-white/40">&</span>
+              {COUPLES.bride.nickname}
             </h1>
 
             {/* Invitation Text */}

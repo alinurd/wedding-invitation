@@ -309,15 +309,15 @@ export const LOVE_STORY = [
 // ============================================
 export const IMGAE_PATH = '/images/';
 export const WEDDING_INFO = {
-  date: '2026-03-30',
-  akadDate: '08:00 s/d Selesai',
-  akadName: 'Waktu',
-  dayName: 'Senin',
-  formattedDate: 'Senin, 30 Maret 2026',
+  date: '2026-03-29',
+  akadDate: 'Kediaman mempelai wanita',
+  akadName: 'Akad',
+  dayName: 'Minggu',
+  formattedDate: 'Minggu, 29 Maret 2026',
   location: {
     akad: 'Kediaman Pempelai Wanita',
-    resepsi: 'Kp.Cisangku RT.01 RW.02 Desa Malasari Kec.Nanggung - Bogor',
-    map: 'https://goo.gl/maps/tY7EVuLTjmpsTgDcA',
+    resepsi: 'Kp.Pasir Pari RT.03 RW.04 Desa Kiarasari Kec.Sukajaya - Bogor',
+    map: 'https://goo.gl/maps/GShNB7rUHonVNntE9',
   },
   
   dress_code: {

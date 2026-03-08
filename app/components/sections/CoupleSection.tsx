@@ -167,7 +167,7 @@ export function CoupleSection() {
                         <div className="text-center md:text-left">
                          
                           <p className="text-yellow-300 text-xs uppercase tracking-widest font-light mb-1">
-                            Resepsi & Akad
+                            Resepsi
                           </p>
                           <p className="text-white text-md  font-light">
                             {WEDDING_INFO.formattedDate}
