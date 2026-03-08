@@ -14,7 +14,7 @@ export default function ClientHome() {
 
   const guestName = searchParams.get('to')?.replace(/-/g, ' ').replace(/\bdan\b/gi, '&') || '';
 
-  const [showVideoPreview, setShowVideoPreview] = useState(false);
+  const [showVideoPreview, setShowVideoPreview] = useState(true);
   const [videoUrl, setVideoUrl] = useState('/videos/vid.mp4');
   const [showAllSection, setShowAllSection] = useState(true);
 
