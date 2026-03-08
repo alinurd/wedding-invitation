@@ -2,11 +2,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { AudioProvider } from '@/lib/context/AudioContext';
+import {COUPLES, WEDDING_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Ali & Ia - Wedding Invitation',
-  description:
-    'Undangan Pernikahan Ali & Ia | 15 Juni 2024 | Grand Ballroom Kemang, Jakarta',
+  description: `Undangan Pernikahan ${COUPLES.groom.name} & ${COUPLES.bride.name} | ${WEDDING_INFO.formattedDate} | Lokasi: ${WEDDING_INFO.location.resepsi}`,
   viewport: {
     width: 'device-width',
     initialScale: 1,
