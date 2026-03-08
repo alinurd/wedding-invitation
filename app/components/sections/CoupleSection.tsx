@@ -74,7 +74,8 @@ export function CoupleSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-white-400/20 to-rose-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <Image
-              src={`${IMGAE_PATH}/foto.jpeg`}
+              // src={`${IMGAE_PATH}/foto.jpeg`}
+              src="/ia/images/foto.jpeg"
                 alt="Ali & Ia"
                 width={500}
                 height={700}
