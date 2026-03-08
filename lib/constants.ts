@@ -307,7 +307,7 @@ export const LOVE_STORY = [
 // ============================================
 // WEDDING DETAILS
 // ============================================
-
+export const IMGAE_PATH = '/ia/images';
 export const WEDDING_INFO = {
   date: '2026-03-30',
   akadDate: '08:00 s/d Selesai',

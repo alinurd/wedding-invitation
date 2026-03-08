@@ -3,7 +3,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { COUPLES, WEDDING_INFO } from '@/lib/constants';
+import { COUPLES, IMGAE_PATH, WEDDING_INFO } from '@/lib/constants';
 import { useAudio } from '@/lib/context/AudioContext';
 interface VideoPreviewProps {
   onComplete: () => void;
@@ -168,7 +168,9 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4',g
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/card.jpg')" }}
+                        style={{ backgroundImage: `url('${IMGAE_PATH}/card.jpg')` }}
+
+            // style={{ backgroundImage: "url('/images/card.jpg')" }}
           />
 
           {/* Dark Overlay */}
