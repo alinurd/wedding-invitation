@@ -44,8 +44,8 @@ export function HeroSection({openInvitation}:Props) {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-        src={`${IMGAE_PATH}/foto.jpeg`}
-          // src="/images/foto.jpeg"
+        // src={`${IMGAE_PATH}/foto.jpeg`}
+          src="/ia/images/foto.jpeg"
           alt="Wedding background"
           fill
           className="object-cover"
