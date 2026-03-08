@@ -100,46 +100,104 @@ export function GuestWishesSection() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!name.trim() || !message.trim()) {
-      alert('Mohon isi nama dan pesan ucapan');
-      return;
+useEffect(() => {
+  const fetchWishes = async () => {
+    try {
+      const res = await fetch('/ia/api/guest-wishes');
+      const data = await res.json();
+
+      // Konversi timestamp string jadi Date
+      const wishesWithDate = data.map((wish: any) => ({
+        ...wish,
+        timestamp: new Date(wish.timestamp),
+      }));
+
+      setWishes(wishesWithDate);
+    } catch (err) {
+      console.error('Gagal mengambil ucapan:', err);
     }
+  };
 
-    setIsSubmitting(true);
+  fetchWishes();
+}, []);
 
-    // Simulate API call
-    setTimeout(() => {
-      const newWish: Wish = {
-        id: Date.now().toString(),
-        name,
-        message,
-        image: image || undefined,
-        timestamp: new Date(),
-      };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-      setWishes([newWish, ...wishes]);
-      setName('');
-      setMessage('');
-      setImage(null);
-      setIsSubmitting(false);
+  if (!name.trim() || !message.trim()) {
+    alert('Mohon isi nama dan pesan ucapan');
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch('/ia/api/guest-wishes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, message, image }),
+    });
+
+    if (!res.ok) throw new Error('Gagal mengirim ucapan');
+
+    const newWish = await res.json();
+
+    setWishes([newWish, ...wishes]);
+    setName('');
+    setMessage('');
+    setImage(null);
+
+    alert('Terima kasih atas ucapan Anda! Ucapan telah berhasil dikirim.');
+  } catch (err) {
+    console.error(err);
+    alert('Terjadi kesalahan saat mengirim ucapan.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+    
+  //   if (!name.trim() || !message.trim()) {
+  //     alert('Mohon isi nama dan pesan ucapan');
+  //     return;
+  //   }
+
+  //   setIsSubmitting(true);
+
+  //   // Simulate API call
+  //   setTimeout(() => {
+  //     const newWish: Wish = {
+  //       id: Date.now().toString(),
+  //       name,
+  //       message,
+  //       image: image || undefined,
+  //       timestamp: new Date(),
+  //     };
+
+  //     setWishes([newWish, ...wishes]);
+  //     setName('');
+  //     setMessage('');
+  //     setImage(null);
+  //     setIsSubmitting(false);
       
-      // Show success message
-      alert('Terima kasih atas ucapan Anda! Ucapan telah berhasil dikirim.');
-    }, 1500);
-  };
+  //     // Show success message
+  //     alert('Terima kasih atas ucapan Anda! Ucapan telah berhasil dikirim.');
+  //   }, 1500);
+  // };
 
-  const formatDate = (date: Date) => {
-    return new Intl.DateTimeFormat('id-ID', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-    }).format(date);
-  };
+const formatDate = (date: string | Date) => {
+  const d = new Date(date);
+  if (isNaN(d.getTime())) return '-';
+  return new Intl.DateTimeFormat('id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(d);
+};
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center py-16 md:py-24 px-4 md:px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a] overflow-hidden">
@@ -228,73 +286,6 @@ export function GuestWishesSection() {
                   />
                 </div>
 
-                {/* Photo Upload Section */}
-                <div>
-                  <label className="block text-white/80 text-sm font-light mb-2">
-                    Tambahkan Foto (Opsional)
-                  </label>
-                  
-                  <div className="space-y-4">
-                    {/* Preview Image */}
-                    {image && (
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="relative rounded-xl overflow-hidden"
-                      >
-                        <Image
-                          src={image}
-                          alt="Preview"
-                          width={400}
-                          height={300}
-                          className="w-full  object-cover"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => setImage(null)}
-                          className="absolute top-2 right-2 p-2 bg-black/60 rounded-full hover:bg-black/80 transition-colors"
-                        >
-                          <X className="w-4 h-4 text-white" />
-                        </button>
-                      </motion.div>
-                    )}
-
-                    {/* Upload Buttons */}
-                    <div className="flex gap-3">
-                      {/* Camera Button */}
-                      <motion.button
-                        type="button"
-                        onClick={() => setShowCamera(true)}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-yellow-400/10 border border-yellow-400/30 rounded-xl text-yellow-400 hover:bg-yellow-400/20 transition-all"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Camera className="w-5 h-5" />
-                        <span className="text-sm font-medium">Ambil Foto</span>
-                      </motion.button>
-
-                      {/* Upload Button */}
-                      <motion.button
-                        type="button"
-                        onClick={() => fileInputRef.current?.click()}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-rose-400/10 border border-rose-400/30 rounded-xl text-rose-400 hover:bg-rose-400/20 transition-all"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Upload className="w-5 h-5" />
-                        <span className="text-sm font-medium">Upload Foto</span>
-                      </motion.button>
-
-                      <input
-                        ref={fileInputRef}
-                        type="file"
-                        accept="image/*"
-                        onChange={handleFileUpload}
-                        className="hidden"
-                      />
-                    </div>
-                  </div>
-                </div>
 
                 {/* Submit Button */}
                 <motion.button
