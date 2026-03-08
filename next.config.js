@@ -1,6 +1,7 @@
 // next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath:'/ia',
   images: {
     unoptimized: false,
     remotePatterns: [
