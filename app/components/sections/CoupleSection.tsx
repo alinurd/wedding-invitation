@@ -37,6 +37,7 @@ export function CoupleSection() {
                 className="object-cover"
                 priority
                 quality={100}
+                unoptimized
               />
               {/* Dark overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />

@@ -323,6 +323,7 @@ export function GuestWishesSection() {
           fill
           className="object-cover"
           priority
+          unoptimized
           quality={100}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />

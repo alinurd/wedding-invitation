@@ -50,6 +50,7 @@ export function HeroSection({openInvitation}:Props) {
           fill
           className="object-cover"
           priority
+          unoptimized
           quality={100}
         />
         {/* Dark overlay gradient */}
