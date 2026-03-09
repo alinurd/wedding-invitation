@@ -52,6 +52,7 @@ src="/images/story.jpeg"
             fill
             className="object-cover"
             priority
+            unoptimized
             quality={100}
           />
           <div className="absolute top-0 left-0 w-96 h-96 bg-black/5 rounded-full blur-3xl" />
@@ -130,6 +131,7 @@ src="/images/story.jpeg"
                     alt={story.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    unoptimized
                   />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
