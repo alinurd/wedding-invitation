@@ -16,7 +16,7 @@ export function VideoPreview({ onComplete, videoUrl = '/videos/prewedding.mp4',g
   const [isPlaying, setIsPlaying] = useState(false); // Ubah default ke false
   const [progress, setProgress] = useState(0);
   const [showOverlay, setShowOverlay] = useState(true); // State untuk overlay pembuka
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(true);
   
  
   const { startAudio } = useAudio();
