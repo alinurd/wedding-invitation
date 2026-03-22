@@ -45,7 +45,7 @@ export function HeroSection({openInvitation}:Props) {
       <div className="absolute inset-0 w-full h-full">
         <Image
         // src={`${IMGAE_PATH}/foto.jpeg`}
-          src="/images/foto.jpeg"
+          src="/images/a.jpeg"
           alt="Wedding background"
           fill
           className="object-cover"
